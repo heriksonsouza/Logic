@@ -23,4 +23,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         onDestroy();
     }
+
+    //CHAMAR SEGUNDA TELA
+    public void chamarSegundaTela(View view){
+        Intent intent = new Intent(this, SegundaTela.class);
+        intent.putExtra("modeloMoto", "Iron883");
+        intent.putExtra("quantidade", 3);
+        startActivity(intent);
+    }
 }
