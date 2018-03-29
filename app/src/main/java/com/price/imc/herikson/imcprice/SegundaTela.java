@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class SegundaTela extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class SegundaTela extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener{
 
     private ListView listViewCarros;
 
@@ -40,5 +40,12 @@ public class SegundaTela extends AppCompatActivity implements AdapterView.OnItem
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Log.i("SegundaTela", parent.getItemAtPosition(position).toString());
+
+    }
+
+    @Override
+    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+        Log.i("SegundaTela", parent.getItemAtPosition(position).toString());
+        return false;
     }
 }
