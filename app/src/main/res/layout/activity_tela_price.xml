@@ -75,6 +75,7 @@
         android:layout_marginTop="24dp"
         android:background="@android:color/holo_green_dark"
         android:textColor="#ffffff"
+
         android:text="CALCULAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
