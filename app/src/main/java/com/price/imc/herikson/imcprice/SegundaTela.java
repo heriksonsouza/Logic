@@ -8,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SegundaTela extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener{
 
     private ListView listViewCarros;
@@ -24,8 +27,16 @@ public class SegundaTela extends AppCompatActivity implements AdapterView.OnItem
         String times[] = {"Camaro", "Civic", "Corolla"};
         ArrayAdapter<String> adapterCarros = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, times);
 
-        listViewCarros.setAdapter(adapterCarros);
-        listViewCarros.setOnItemClickListener(this);
+        //NOVO ADAPTER
+        List<Carro> listaCarros = new ArrayList<>();
+        listaCarros.add(new Carro(1L, "Camaro", "3.0-SS"), R.drawable.amarelo);
+        AdapterCarros adapter = new AdapterCarros(this, listaCarros);
+
+        listViewCarros.setAdapter(adapter);
+
+
+        //listViewCarros.setAdapter(adapterCarros);
+        //listViewCarros.setOnItemClickListener(this);
 
         //-------------------------------------------------------------------------------
         Bundle bundle = getIntent().getExtras();
