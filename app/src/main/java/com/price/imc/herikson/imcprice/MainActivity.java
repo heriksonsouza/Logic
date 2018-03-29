@@ -4,13 +4,23 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ListView listViewCarros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        listViewCarros = (ListView) findViewById(R.id.listCarros);
+
+        String times[] = {"Camaro", "Civic", "Corolla"};
+        ArrayAdapter<String> adapterTimes = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, times);
+        listViewCarros.setAdapter(adapterTimes);
     }
 
     public void chamarImc(View view){
