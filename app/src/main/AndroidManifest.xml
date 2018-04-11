@@ -19,7 +19,8 @@
         <activity android:name=".TelaImc" />
         <activity android:name=".TelaPrice" />
         <activity android:name=".SegundaTela" />
-        <activity android:name=".FormularioCarro"></activity>
+        <activity android:name=".FormularioCarro" />
+        <activity android:name=".ApresentarImagem"></activity>
     </application>
 
 </manifest>
