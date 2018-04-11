@@ -35,4 +35,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("quantidade", 3);
         startActivity(intent);
     }
+
+    public void chamarApresentarImagem(View view){
+        Intent intent = new Intent(this, ApresentarImagem.class);
+        startActivity(intent);
+    }
 }

@@ -52,4 +52,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btImc" />
 
+    <Button
+        android:id="@+id/btApresentarImagem"
+        android:layout_width="115dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="chamarApresentarImagem"
+        android:text="IMAGEM"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btPrice" />
+
 </android.support.constraint.ConstraintLayout>
