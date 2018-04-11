@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".TelaImc" />
         <activity android:name=".TelaPrice" />
-        <activity android:name=".SegundaTela"></activity>
+        <activity android:name=".SegundaTela" />
+        <activity android:name=".FormularioCarro"></activity>
     </application>
 
 </manifest>

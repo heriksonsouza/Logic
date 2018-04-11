@@ -11,6 +11,10 @@ public class Carro {
     private String modelo;
     private int imagem;
 
+    public Carro(){
+
+    }
+
     public Carro(long id, String nome, String modelo, int imagem) {
         this.id = id;
         this.nome = nome;
