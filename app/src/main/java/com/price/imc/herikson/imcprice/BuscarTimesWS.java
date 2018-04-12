@@ -73,4 +73,16 @@ public class BuscarTimesWS extends AsyncTask<String, Integer, String> {
         }
         return jSonRetorno;
     }
+
+    /* CANCELAR A THREAD
+    @Override
+    protected void onCancelled(String s) {
+        super.onCancelled(s);
+    }
+
+    @Override
+    protected void onCancelled() {
+        super.onCancelled();
+    }
+    */
 }
