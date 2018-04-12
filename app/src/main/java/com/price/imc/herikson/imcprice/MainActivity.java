@@ -15,17 +15,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       }
+    }
 
     public void chamarImc(View view){
         Intent intent = new Intent(this, TelaImc.class);
         startActivity(intent);
-        onDestroy();
     }
     public void chamarPrice(View view){
         Intent intent = new Intent(this, TelaPrice.class);
         startActivity(intent);
-        onDestroy();
     }
 
     //CHAMAR SEGUNDA TELA
@@ -38,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void chamarApresentarImagem(View view){
         Intent intent = new Intent(this, ApresentarImagem.class);
+        startActivity(intent);
+    }
+
+    public void chamarMostrarTimesWS(View view){
+        Intent intent = new Intent(this, MostrarTimesWS.class);
         startActivity(intent);
     }
 }

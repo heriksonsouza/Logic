@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.price.imc.herikson.imcprice">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -21,7 +22,8 @@
         <activity android:name=".TelaPrice" />
         <activity android:name=".SegundaTela" />
         <activity android:name=".FormularioCarro" />
-        <activity android:name=".ApresentarImagem"></activity>
+        <activity android:name=".ApresentarImagem" />
+        <activity android:name=".MostrarTimesWS"></activity>
     </application>
 
 </manifest>
