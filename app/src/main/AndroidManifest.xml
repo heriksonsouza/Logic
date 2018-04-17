@@ -20,10 +20,10 @@
         </activity>
         <activity android:name=".TelaImc" />
         <activity android:name=".TelaPrice" />
-        <activity android:name=".SegundaTela" />
-        <activity android:name=".FormularioCarro" />
         <activity android:name=".ApresentarImagem" />
-        <activity android:name=".MostrarTimesWS"></activity>
+        <activity android:name=".MostrarListaWS" />
+        <activity android:name=".FormularioAluno" />
+        <activity android:name=".ListaAlunos"></activity>
     </application>
 
 </manifest>

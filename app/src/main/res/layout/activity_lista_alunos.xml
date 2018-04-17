@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.price.imc.herikson.imcprice.SegundaTela">
+    tools:context="com.price.imc.herikson.imcprice.ListaAlunos">
 
     <ListView
         android:id="@+id/listCarros"
@@ -24,37 +24,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btRecuperar"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btRecuperar"
-        android:layout_width="104dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/holo_green_light"
-        android:onClick="recuperarSP"
-        android:text="RECUPERAR"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/btGravar"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/btGravar"
-        android:layout_width="101dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/holo_green_light"
-        android:onClick="gravarSP"
-        android:text="GRAVAR"
-        android:textAllCaps="false"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.design.widget.FloatingActionButton

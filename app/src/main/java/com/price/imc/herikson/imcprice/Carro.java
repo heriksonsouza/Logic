@@ -1,8 +1,5 @@
 package com.price.imc.herikson.imcprice;
 
-/**
- * Created by Herikson Souza on 28/03/18.
- */
 
 public class Carro {
 

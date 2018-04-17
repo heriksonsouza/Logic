@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chamarMostrarTimesWS(View view){
-        Intent intent = new Intent(this, MostrarTimesWS.class);
+        Intent intent = new Intent(this, MostrarListaWS.class);
         startActivity(intent);
     }
 }

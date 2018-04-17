@@ -42,7 +42,7 @@ public class BuscarTimesWS extends AsyncTask<String, Integer, String> {
         super.onPostExecute(s);
         Gson gson = new Gson();
         List<Carro> carros = gson.fromJson(s, new TypeToken<List<Carro>>(){}.getType());
-        AdapterCarros adapterCarros = new AdapterCarros(activity, carros);
+        AdapterAlunos adapterCarros = new AdapterAlunos(activity, carros);
         ListView listView = (ListView) activity.findViewById(R.id.listTimes);
         listView.setAdapter(adapterCarros);
         progressBar.setVisibility(View.INVISIBLE);

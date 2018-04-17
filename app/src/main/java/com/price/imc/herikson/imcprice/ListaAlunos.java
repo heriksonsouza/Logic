@@ -18,18 +18,18 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SegundaTela extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener{
+public class ListaAlunos extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener{
 
-    private ListView listViewCarros;
+    private ListView listViewAlunos;
 
     private final String TAG="Segunda tela";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_segunda_tela);
+        setContentView(R.layout.activity_lista_alunos);
 
-        listViewCarros = (ListView) findViewById(R.id.listCarros);
+        listViewAlunos = (ListView) findViewById(R.id.listCarros);
 
         String times[] = {"Camaro", "Civic", "Corolla"};
         ArrayAdapter<String> adapterCarros = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, times);
@@ -48,7 +48,7 @@ public class SegundaTela extends AppCompatActivity implements AdapterView.OnItem
     }
 
     public void chamarFormulario(View view){
-        Intent intent = new Intent(this, FormularioCarro.class);
+        Intent intent = new Intent(this, FormularioAluno.class);
         startActivity(intent);
     }
 
@@ -60,11 +60,11 @@ public class SegundaTela extends AppCompatActivity implements AdapterView.OnItem
 
     public void preencherLista(){
         //Novo Adapter
-        List<Carro> listaCarros = new ArrayList<>();
+        List<Aluno> listaAlunos = new ArrayList<>();
         //Linha 1
-        listaCarros = new DAOCarro(this).buscarTodos();
-        AdapterCarros adapter = new AdapterCarros(this, listaCarros);
-        listViewCarros.setAdapter(adapter);
+        listaAlunos = new DAOAluno(this).buscarTodos();
+        AdapterAlunos adapter = new AdapterAlunos(this, listaAlunos);
+        listViewAlunos.setAdapter(adapter);
     }
 
     public void gravarSP(View view){
@@ -99,11 +99,11 @@ public class SegundaTela extends AppCompatActivity implements AdapterView.OnItem
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Log.i("SegundaTela", parent.getItemAtPosition(position).toString());
+        Log.i("FormularioAlunos", parent.getItemAtPosition(position).toString());
         //pegar objeto a partir da posicao no listview
-        Carro carro = (Carro) parent.getItemAtPosition(position);
-        Intent intent = new Intent(this, FormularioCarro.class);
-        intent.putExtra("id", carro.getId());
+        Aluno aluno = (Aluno) parent.getItemAtPosition(position);
+        Intent intent = new Intent(this, FormularioAluno.class);
+        intent.putExtra("id", aluno.getId());
         startActivity(intent);
     }
 
