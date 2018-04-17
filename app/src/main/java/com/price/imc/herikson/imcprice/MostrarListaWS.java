@@ -9,7 +9,7 @@ public class MostrarListaWS extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_times_ws);
-        BuscarTimesWS buscarTimesWS = new BuscarTimesWS(MostrarListaWS.this);
+        BuscarAlunosWS buscarTimesWS = new BuscarAlunosWS(MostrarListaWS.this);
         buscarTimesWS.execute("http://200.17.98.122:8080/hellows/rest/service/listaTimesRio");
     }
 }

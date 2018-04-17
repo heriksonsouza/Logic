@@ -17,16 +17,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-/**
- * Created by aluno on 11/04/18.
- */
 
-public class BuscarTimesWS extends AsyncTask<String, Integer, String> {
+public class BuscarAlunosWS extends AsyncTask<String, Integer, String> {
 
     Activity activity;
     ProgressBar progressBar;
 
-    public BuscarTimesWS(Activity activity){
+    public BuscarAlunosWS(Activity activity){
         this.activity = activity;
     }
 
@@ -41,8 +38,8 @@ public class BuscarTimesWS extends AsyncTask<String, Integer, String> {
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
         Gson gson = new Gson();
-        List<Carro> carros = gson.fromJson(s, new TypeToken<List<Carro>>(){}.getType());
-        AdapterAlunos adapterCarros = new AdapterAlunos(activity, carros);
+        List<Aluno> alunos = gson.fromJson(s, new TypeToken<List<Carro>>(){}.getType());
+        AdapterAlunos adapterCarros = new AdapterAlunos(activity, alunos);
         ListView listView = (ListView) activity.findViewById(R.id.listTimes);
         listView.setAdapter(adapterCarros);
         progressBar.setVisibility(View.INVISIBLE);

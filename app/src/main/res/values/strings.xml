@@ -1,5 +1,3 @@
 <resources>
-    <string name="app_name">ImcPrice</string>
-    <string name="imc">IMC</string>
-    <string name="price">PRICE</string>
-</resources>
+    <string name="app_name">LogicVAN</string>
+  </resources>
