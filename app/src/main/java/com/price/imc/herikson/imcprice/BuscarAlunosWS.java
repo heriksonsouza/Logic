@@ -38,10 +38,10 @@ public class BuscarAlunosWS extends AsyncTask<String, Integer, String> {
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
         Gson gson = new Gson();
-        List<Aluno> alunos = gson.fromJson(s, new TypeToken<List<Carro>>(){}.getType());
-        AdapterAlunos adapterCarros = new AdapterAlunos(activity, alunos);
+        List<Aluno> alunos = gson.fromJson(s, new TypeToken<List<Aluno>>(){}.getType());
+        AdapterAlunos adapterAlunos = new AdapterAlunos(activity, alunos);
         ListView listView = (ListView) activity.findViewById(R.id.listTimes);
-        listView.setAdapter(adapterCarros);
+        listView.setAdapter(adapterAlunos);
         progressBar.setVisibility(View.INVISIBLE);
     }
 
