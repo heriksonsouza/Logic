@@ -43,8 +43,8 @@ public class DAOAluno {
         db.update("carro", values, "id="+aluno.getId(), null);
     }
 
-    public void excluirCarro(Carro carro){
-        db.delete("carro", "id="+carro.getId(), null);
+    public void excluirAluno(Aluno aluno){
+        db.delete("carro", "id="+aluno.getId(), null);
     }
 
     public List<Aluno> buscarTodos(){

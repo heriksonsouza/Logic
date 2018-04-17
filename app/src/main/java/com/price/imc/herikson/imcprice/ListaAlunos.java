@@ -67,36 +67,6 @@ public class ListaAlunos extends AppCompatActivity implements AdapterView.OnItem
         listViewAlunos.setAdapter(adapter);
     }
 
-    public void gravarSP(View view){
-        //-------Busca as preferências desta Activity
-        SharedPreferences spg = this.getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = spg.edit();
-
-        Gson gson = new Gson();
-        List<Carro> carros = new ArrayList<>();
-        carros.add(new Carro(1L, "Mustang", "4.0-Turbo", R.drawable.carro_top2));
-        String carrosJson = gson.toJson(carros);
-        Log.i("SegundaTela", carrosJson);
-
-        editor.putString("carros", carrosJson);
-        editor.commit();
-
-        //LINHA 4
-    }
-
-    public void recuperarSP(View view){
-        SharedPreferences spg = this.getPreferences(Context.MODE_PRIVATE);
-        String carro = spg.getString("carro", "Dodger");
-
-        /*
-        String carrosJson = spg.getString("carros", "sem carros");
-        Gson gson = new Gson();
-        List<Carro> listaCarros = gson.fromJson(carrosJson, new TypeToken<List<Carro>>(){}.getType());
-        */
-        Log.i("SegundaTela", carro);
-
-    }
-
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Log.i("FormularioAlunos", parent.getItemAtPosition(position).toString());
@@ -110,13 +80,13 @@ public class ListaAlunos extends AppCompatActivity implements AdapterView.OnItem
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         Log.i("MainActivity", parent.getItemAtPosition(position).toString());
-        final Carro carro = (Carro) parent.getItemAtPosition(position);
-        final DAOCarro dao = new DAOCarro(this);
+        final Aluno aluno = (Aluno) parent.getItemAtPosition(position);
+        final DAOAluno dao = new DAOAluno(this);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Deseja Excluir o Carro??")
+        builder.setMessage("Deseja remover o aluno?")
                 .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        dao.excluirCarro(carro);
+                        dao.excluirAluno(aluno);
                         preencherLista();
                     }
                 })
