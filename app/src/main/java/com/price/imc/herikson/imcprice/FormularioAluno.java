@@ -23,6 +23,7 @@ public class FormularioAluno extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_aluno);
+
         editCpf = (EditText) findViewById(R.id.editTextCpf);
         editNome = (EditText) findViewById(R.id.editTextNome);
         editCep = (EditText) findViewById(R.id.editTextCep);

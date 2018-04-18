@@ -37,17 +37,17 @@ public class ListaAlunos extends AppCompatActivity implements AdapterView.OnItem
         //LINHA 2
         //LINHA 3
 
-        //-------------------------------------------------------------------------------
+        /*
         Bundle bundle = getIntent().getExtras();
         String modelo = bundle.getString("modeloMoto");
         Integer quantidade = bundle.getInt("quantidade");
         Log.i("Segunda tela", "Modelo da moto: "+modelo);
         Log.i("Segunda tela", "Quantidade no estoque: "+quantidade);
-        //-------------------------------------------------------------------------------
+        */
 
     }
 
-    public void chamarFormulario(View view){
+    public void chamarFormularioAluno(View view){
         Intent intent = new Intent(this, FormularioAluno.class);
         startActivity(intent);
     }

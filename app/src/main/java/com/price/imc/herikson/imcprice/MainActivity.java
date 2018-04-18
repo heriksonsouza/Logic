@@ -17,17 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-     public void chamarApresentarImagem(View view){
-        Intent intent = new Intent(this, ApresentarImagem.class);
-        startActivity(intent);
-    }
-
-    public void chamarMostrarTimesWS(View view){
-        Intent intent = new Intent(this, MostrarListaWS.class);
-        startActivity(intent);
-    }
-
-    public void chamarFormularioAluno(View view){
+        public void chamarFormularioAluno(View view){
         Intent intent = new Intent(this, FormularioAluno.class);
         startActivity(intent);
     }
